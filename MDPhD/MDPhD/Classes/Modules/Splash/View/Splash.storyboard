@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWh-97-kz1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="fnS-FK-W1w">
+            <objects>
+                <viewController id="dWh-97-kz1" customClass="SplashViewController" customModule="MDPhD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nj6-RT-Nhv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="KUg-D6-qub">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="K3w-e6-SKd">
+                                <rect key="frame" x="177" y="103" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="0xH-Jj-aDS"/>
+                                    <constraint firstAttribute="height" constant="20" id="Pf0-Ra-hD7"/>
+                                </constraints>
+                                <color key="color" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K3w-e6-SKd" firstAttribute="top" secondItem="OX3-eC-ihh" secondAttribute="top" constant="83" id="2u8-MI-Nxe"/>
+                            <constraint firstItem="KUg-D6-qub" firstAttribute="trailing" secondItem="OX3-eC-ihh" secondAttribute="trailing" id="3LP-xs-1Xh"/>
+                            <constraint firstItem="KUg-D6-qub" firstAttribute="top" secondItem="nj6-RT-Nhv" secondAttribute="top" id="BdH-5w-RRa"/>
+                            <constraint firstItem="KUg-D6-qub" firstAttribute="leading" secondItem="OX3-eC-ihh" secondAttribute="leading" id="NgD-oP-lJA"/>
+                            <constraint firstItem="K3w-e6-SKd" firstAttribute="leading" secondItem="OX3-eC-ihh" secondAttribute="leading" constant="177" id="SP2-6V-rCb"/>
+                            <constraint firstItem="OX3-eC-ihh" firstAttribute="trailing" secondItem="K3w-e6-SKd" secondAttribute="trailing" constant="178" id="w3Q-tA-oIn"/>
+                            <constraint firstItem="KUg-D6-qub" firstAttribute="bottom" secondItem="OX3-eC-ihh" secondAttribute="bottom" id="yhh-wa-gQG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OX3-eC-ihh"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="K3w-e6-SKd" id="mCn-k3-j9v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0t-h8-1ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-420" y="-60.719640179910051"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash" width="374" height="664"/>
+    </resources>
+</document>
