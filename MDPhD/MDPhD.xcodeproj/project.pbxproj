@@ -64,6 +64,9 @@
 		10B5DF95212F7B2C000B22E3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF8E212F7B2C000B22E3 /* Observable.swift */; };
 		10B5DF99212F7BE9000B22E3 /* BlockBasedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF97212F7BE9000B22E3 /* BlockBasedSelector.m */; };
 		10B5DF9B212FB2B6000B22E3 /* Appdelegate+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF9A212FB2B6000B22E3 /* Appdelegate+Firebase.swift */; };
+		10C5961E213889C90029F2A6 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5961D213889C90029F2A6 /* Storable.swift */; };
+		10CD12CD21388E74003CC430 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CD12CB21388E73003CC430 /* DataStore.swift */; };
+		10CD12CE21388E74003CC430 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CD12CC21388E74003CC430 /* KeychainStore.swift */; };
 		10D56C4B21371BFC004889B2 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D56C4A21371BFC004889B2 /* FirebaseCore.framework */; };
 		10D56C5421372E0E004889B2 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D56C4C21372E0A004889B2 /* FirebaseCoreDiagnostics.framework */; };
 		10D56C5521372E0E004889B2 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D56C4D21372E0A004889B2 /* GoogleUtilities.framework */; };
@@ -346,6 +349,9 @@
 		10B5DF97212F7BE9000B22E3 /* BlockBasedSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockBasedSelector.m; sourceTree = "<group>"; };
 		10B5DF98212F7BE9000B22E3 /* BlockBasedSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockBasedSelector.h; sourceTree = "<group>"; };
 		10B5DF9A212FB2B6000B22E3 /* Appdelegate+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appdelegate+Firebase.swift"; sourceTree = "<group>"; };
+		10C5961D213889C90029F2A6 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		10CD12CB21388E73003CC430 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		10CD12CC21388E74003CC430 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		10D56C4A21371BFC004889B2 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
 		10D56C4C21372E0A004889B2 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		10D56C4D21372E0A004889B2 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
@@ -910,6 +916,16 @@
 			path = BlockBasedSelector;
 			sourceTree = "<group>";
 		};
+		10C5961C2138897C0029F2A6 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				10CD12CB21388E73003CC430 /* DataStore.swift */,
+				10CD12CC21388E74003CC430 /* KeychainStore.swift */,
+				10C5961D213889C90029F2A6 /* Storable.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
 		10D56C49213717E0004889B2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -929,6 +945,7 @@
 		10D9D21321190AF400D6FE2F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				10C5961C2138897C0029F2A6 /* DataStore */,
 				106A6F4F2131380500E0C4B6 /* Firebase */,
 				106A6F322130FCF100E0C4B6 /* API */,
 				10B5DF81212F78B0000B22E3 /* Observable */,
@@ -2310,6 +2327,7 @@
 				106A6F4C21311A6600E0C4B6 /* MDPhDApi.swift in Sources */,
 				10D9D2E021192BBB00D6FE2F /* HomeRouter.swift in Sources */,
 				10D9D2DA21192BBB00D6FE2F /* HomeConfigurator.swift in Sources */,
+				10C5961E213889C90029F2A6 /* Storable.swift in Sources */,
 				CC3B6BEC794ED51509FC3AFF /* FollowViewInput.swift in Sources */,
 				8AD7DA7BE1DE5D64A4642C0A /* FollowViewOutput.swift in Sources */,
 				38E342B4130387C3CF52F8A0 /* FollowViewController.swift in Sources */,
@@ -2373,6 +2391,7 @@
 				8E0DC82502BC75F35EED64B7 /* SettingsRouter.swift in Sources */,
 				32E3BAD95CDCB483F605290F /* SettingsConfigurator.swift in Sources */,
 				229ABB1ABCCE9F9CA75F9A1F /* SettingsInitializer.swift in Sources */,
+				10CD12CE21388E74003CC430 /* KeychainStore.swift in Sources */,
 				1BA44027326091DD5AAF73E1 /* AuthenticationViewInput.swift in Sources */,
 				F5E27649B7A83B274D3FAF5E /* AuthenticationViewOutput.swift in Sources */,
 				1069FCD4211C6B380032F435 /* SegueHandler.swift in Sources */,
@@ -2383,6 +2402,7 @@
 				10A4BB9C211CF6ED00945EFB /* AuthFormViewModel.swift in Sources */,
 				726A639A6E2519D0A5F532C6 /* AuthenticationPresenter.swift in Sources */,
 				1069FCD6211C6B760032F435 /* ItemStackable.swift in Sources */,
+				10CD12CD21388E74003CC430 /* DataStore.swift in Sources */,
 				73EB9D2485874320140A3A06 /* AuthenticationInteractorInput.swift in Sources */,
 				106A6F452131071B00E0C4B6 /* NetworkRouter.swift in Sources */,
 				171838F523608C4DB3EA2BBF /* AuthenticationInteractorOutput.swift in Sources */,
