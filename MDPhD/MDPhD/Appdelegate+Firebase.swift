@@ -15,4 +15,5 @@ extension AppDelegate {
          FirebaseApp.configure()
     }
     // TODO firebase remote config
+    
 }

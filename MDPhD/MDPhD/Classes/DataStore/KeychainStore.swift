@@ -1,10 +1,11 @@
 //
 //  KeychainStore.swift
-//  CoreServices
+//  MDPhD
 //
-//  Created by Arbab Khan on 2017-10-25.
-//  Copyright © 2017 Rogers. All rights reserved.
+//  Created by Smitesh Patel on 2018-08-30.
+//  Copyright © 2018 Smitesh Patel. All rights reserved.
 //
+
 
 import Foundation
 

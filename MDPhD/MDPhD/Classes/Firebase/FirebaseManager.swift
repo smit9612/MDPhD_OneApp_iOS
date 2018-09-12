@@ -9,8 +9,26 @@
 import Foundation
 import FirebaseAuth
 
-struct FirebaseManager {
 
-    
+protocol FirebaseManagerProtocol {
+    func getFolders()
+}
 
+struct FirebaseManager: FirebaseManagerProtocol {
+
+    public func getFolders() {
+        // TODO get folders from Firebase
+    }
+
+    public func createFolder() {
+
+    }
+
+    public func deleteFolder() {
+
+    }
+
+    public func updateFolder() {
+
+    }
 }

@@ -11,3 +11,11 @@ class FollowInteractor: FollowInteractorInput {
     weak var output: FollowInteractorOutput!
 
 }
+
+
+extension FollowInteractor: ManagerInjected {
+
+    func getFolders() {
+        firebaseManager.getFolders()
+    }
+}

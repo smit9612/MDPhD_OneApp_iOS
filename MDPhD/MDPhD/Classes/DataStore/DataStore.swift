@@ -1,9 +1,9 @@
 //
 //  DataStore.swift
-//  CoreServices
+//  MDPhD
 //
-//  Created by Arbab Khan on 2017-10-16.
-//  Copyright © 2017 Rogers. All rights reserved.
+//  Created by Smitesh Patel on 2018-08-30.
+//  Copyright © 2018 Smitesh Patel. All rights reserved.
 //
 
 import Foundation
@@ -22,7 +22,7 @@ public struct Credentials {
 
 struct DataStore {
 
-    private var keychainStore = KeychainStore(serviceName: Bundle.main.bundleIdentifier ?? "CoreServices")
+    private var keychainStore = KeychainStore(serviceName: Bundle.main.bundleIdentifier ?? "MDPhD")
 }
 
 extension DataStore: Storable {
