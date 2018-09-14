@@ -11,9 +11,9 @@ import FirebaseCore
 
 extension AppDelegate {
 
-    func initializedFirebase() {
+    func initializeFirebase() {
+        // Check what is your current flow selected is It institution or local
          FirebaseApp.configure()
     }
-    // TODO firebase remote config
-    
+    // TODO firebase remote config    
 }

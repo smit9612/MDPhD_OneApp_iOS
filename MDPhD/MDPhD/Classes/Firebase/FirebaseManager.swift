@@ -10,25 +10,54 @@ import Foundation
 import FirebaseAuth
 
 
+typealias Email = String
+
 protocol FirebaseManagerProtocol {
     func getFolders()
+
+    func initializeFirebase()
+
+    func createFirebaseNewUser(email: String, password: String, completion complete: @escaping ((Result<Bool>) -> Void))
 }
 
-struct FirebaseManager: FirebaseManagerProtocol {
+struct FirebaseAuthManager: FirebaseManagerProtocol {
 
-    public func getFolders() {
+    func initializeFirebase() {
+        
+    }
+
+    func createFirebaseNewUser(email: String, password: String, completion complete: @escaping ((Result<Bool>) -> Void)) {
+        // Check if user is alreadySignUp
+        guard isUserRegisteredFor(email: email) else {
+            complete(.failure(.userAlreadyRegistered))
+            return
+        }
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            guard error == nil else {
+                complete(.failure(.firebaseError))
+                return
+            }
+            complete(.success(true))
+        }
+    }
+
+    private func isUserRegisteredFor(email: Email) -> Bool {
+        return false
+    }
+
+    func getFolders() {
         // TODO get folders from Firebase
     }
 
-    public func createFolder() {
+    func createFolder() {
 
     }
 
-    public func deleteFolder() {
+    func deleteFolder() {
 
     }
 
-    public func updateFolder() {
+    func updateFolder() {
 
     }
 }

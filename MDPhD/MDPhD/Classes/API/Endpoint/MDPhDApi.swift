@@ -32,7 +32,7 @@ public enum MDPhDApi {
     case search
     case cluster
     case facetCount
-    case idSearch
+    case idSearch(params: Parameters, headers: HTTPHeaders)
     case suggest
     case facetMap
     case morelikeThis
@@ -59,6 +59,8 @@ extension MDPhDApi: EndPointType {
 
     var task: HTTPTask {
         switch self {
+        case .idSearch (let params, let httpHeaders):
+            return .requestParametersAndHeaders(bodyParameters: params, ulrParameters: nil, additionHeaders: httpHeaders)
         default:
             return .request
         }
@@ -67,6 +69,4 @@ extension MDPhDApi: EndPointType {
     var headers: HTTPHeaders? {
         return nil
     }
-
-
 }

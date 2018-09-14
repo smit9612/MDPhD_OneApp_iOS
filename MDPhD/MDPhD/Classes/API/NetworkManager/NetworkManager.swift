@@ -23,6 +23,8 @@ public enum CoreServiceError {
     case outdated
     case noData
     case unableToDecode
+    case userAlreadyRegistered
+    case firebaseError
 }
 
 typealias AuthToken = String
@@ -43,7 +45,7 @@ extension NetworkManager {
 
     public func getFeed(complete: @escaping NetworkAPICompletion) {
         DispatchQueue.homeFeedManager.async {
-            self.router.request(.idSearch, completion: { result, urlResponse in
+            self.router.request(.idSearch(params: [:], headers: [:]), completion: { result, urlResponse in
                 switch result {
                 // Handle API specific response
                 case .success:

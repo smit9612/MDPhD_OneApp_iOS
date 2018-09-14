@@ -86,8 +86,9 @@ class NetworkLogger: Loggable {
             }
         }
 
-        if let data = data, let stringValue = data.stringValue {
-            message += "DATA: \r\n\(stringValue.removedSpaces)\r\n"
+        let stringValue : String? = String(decoding: data ?? Data(), as: UTF8.self)
+        if let stringValue = stringValue {
+            message += "DATA: \r\n\(stringValue)\r\n"
         }
 
         log(message: message)

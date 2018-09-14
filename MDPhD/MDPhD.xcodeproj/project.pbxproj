@@ -17,6 +17,7 @@
 		10200DD421105E0F00901BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10200DD221105E0F00901BEA /* LaunchScreen.storyboard */; };
 		10200DDF21105E0F00901BEA /* MDPhDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10200DDE21105E0F00901BEA /* MDPhDTests.swift */; };
 		10200DEA21105E0F00901BEA /* MDPhDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10200DE921105E0F00901BEA /* MDPhDUITests.swift */; };
+		1044835C214B1A9400E5239F /* FirebaseSetup.sh in Resources */ = {isa = PBXBuildFile; fileRef = 10448359214B1A9400E5239F /* FirebaseSetup.sh */; };
 		105EC53B21192EF300B96595 /* Appdelegate+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EC53A21192EF300B96595 /* Appdelegate+Navigation.swift */; };
 		105EC5402119302300B96595 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EC53F2119302300B96595 /* UIStoryboard+Extensions.swift */; };
 		105EC5422119309700B96595 /* UIStoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105EC5412119309700B96595 /* UIStoryboardIdentifiable.swift */; };
@@ -307,6 +308,9 @@
 		10200DE521105E0F00901BEA /* MDPhDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDPhDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10200DE921105E0F00901BEA /* MDPhDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPhDUITests.swift; sourceTree = "<group>"; };
 		10200DEB21105E0F00901BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10448356214B1A9300E5239F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		10448358214B1A9300E5239F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		10448359214B1A9400E5239F /* FirebaseSetup.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirebaseSetup.sh; sourceTree = "<group>"; };
 		105EC53A21192EF300B96595 /* Appdelegate+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appdelegate+Navigation.swift"; sourceTree = "<group>"; };
 		105EC53F2119302300B96595 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		105EC5412119309700B96595 /* UIStoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardIdentifiable.swift; sourceTree = "<group>"; };
@@ -731,6 +735,7 @@
 		10200DC821105E0C00901BEA /* MDPhD */ = {
 			isa = PBXGroup;
 			children = (
+				10448354214B1A4500E5239F /* FirebaseConfig */,
 				10D9D21321190AF400D6FE2F /* Classes */,
 				10200DC921105E0C00901BEA /* AppDelegate.swift */,
 				105EC53A21192EF300B96595 /* Appdelegate+Navigation.swift */,
@@ -763,6 +768,32 @@
 				10200DEB21105E0F00901BEA /* Info.plist */,
 			);
 			path = MDPhDUITests;
+			sourceTree = "<group>";
+		};
+		10448354214B1A4500E5239F /* FirebaseConfig */ = {
+			isa = PBXGroup;
+			children = (
+				10448355214B1A9300E5239F /* Dev */,
+				10448359214B1A9400E5239F /* FirebaseSetup.sh */,
+				10448357214B1A9300E5239F /* Prod */,
+			);
+			path = FirebaseConfig;
+			sourceTree = "<group>";
+		};
+		10448355214B1A9300E5239F /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				10448356214B1A9300E5239F /* GoogleService-Info.plist */,
+			);
+			path = Dev;
+			sourceTree = "<group>";
+		};
+		10448357214B1A9300E5239F /* Prod */ = {
+			isa = PBXGroup;
+			children = (
+				10448358214B1A9300E5239F /* GoogleService-Info.plist */,
+			);
+			path = Prod;
 			sourceTree = "<group>";
 		};
 		105EC53C21192F8100B96595 /* Protocols */ = {
@@ -2205,6 +2236,7 @@
 				10200DC321105E0C00901BEA /* Frameworks */,
 				10200DC421105E0C00901BEA /* Resources */,
 				10A4BB99211CF6AD00945EFB /* Embed Frameworks */,
+				1044835D214B1AE700E5239F /* Firebase Setup */,
 			);
 			buildRules = (
 			);
@@ -2304,6 +2336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10200DD421105E0F00901BEA /* LaunchScreen.storyboard in Resources */,
+				1044835C214B1A9400E5239F /* FirebaseSetup.sh in Resources */,
 				10200DD121105E0F00901BEA /* Assets.xcassets in Resources */,
 				1069FCCC211A466E0032F435 /* Authentication.storyboard in Resources */,
 				1069FCD2211C6A010032F435 /* AMInputView.xib in Resources */,
@@ -2327,6 +2360,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1044835D214B1AE700E5239F /* Firebase Setup */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Firebase Setup";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/MDPhD/FirebaseConfig/FirebaseSetup.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		10200DC221105E0C00901BEA /* Sources */ = {
@@ -2731,7 +2785,7 @@
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mifisi.MDPhD;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mifisi.mdphd-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MDPhD/Classes/Observable/Sources/MDPhD-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2761,7 +2815,7 @@
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mifisi.MDPhD;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mifisi.mdphd-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MDPhD/Classes/Observable/Sources/MDPhD-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
