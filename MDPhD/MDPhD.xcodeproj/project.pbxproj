@@ -43,7 +43,7 @@
 		106A6F4921310AE000E0C4B6 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A6F4821310AE000E0C4B6 /* JSONParameterEncoder.swift */; };
 		106A6F4C21311A6600E0C4B6 /* MDPhDApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A6F4B21311A6600E0C4B6 /* MDPhDApi.swift */; };
 		106A6F4E213130E900E0C4B6 /* ManagerInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A6F4D213130E900E0C4B6 /* ManagerInjector.swift */; };
-		106A6F512131382000E0C4B6 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A6F502131382000E0C4B6 /* FirebaseManager.swift */; };
+		106A6F512131382000E0C4B6 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A6F502131382000E0C4B6 /* FirebaseAuthManager.swift */; };
 		106A6F532131CDDD00E0C4B6 /* CodableFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A6F522131CDDD00E0C4B6 /* CodableFirebase.framework */; };
 		106A6F542131CDDD00E0C4B6 /* CodableFirebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 106A6F522131CDDD00E0C4B6 /* CodableFirebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		106A6F5F2131E46900E0C4B6 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A6F5D2131E46900E0C4B6 /* GTMSessionFetcher.framework */; };
@@ -52,6 +52,7 @@
 		1078FF2F212E79CA00110F9D /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB90211CF6AD00945EFB /* RxTest.framework */; };
 		1078FF30212E79D000110F9D /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8E211CF6AC00945EFB /* RxBlocking.framework */; };
 		1078FF31212E79D100110F9D /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8E211CF6AC00945EFB /* RxBlocking.framework */; };
+		108E4CC7214FD06300B253C8 /* CoreServicesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108E4CC6214FD06300B253C8 /* CoreServicesError.swift */; };
 		10A4BB91211CF6AD00945EFB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8D211CF6AC00945EFB /* RxSwift.framework */; };
 		10A4BB92211CF6AD00945EFB /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8D211CF6AC00945EFB /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		10A4BB95211CF6AD00945EFB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8F211CF6AD00945EFB /* RxCocoa.framework */; };
@@ -336,12 +337,13 @@
 		106A6F4821310AE000E0C4B6 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		106A6F4B21311A6600E0C4B6 /* MDPhDApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPhDApi.swift; sourceTree = "<group>"; };
 		106A6F4D213130E900E0C4B6 /* ManagerInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInjector.swift; sourceTree = "<group>"; };
-		106A6F502131382000E0C4B6 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		106A6F502131382000E0C4B6 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		106A6F522131CDDD00E0C4B6 /* CodableFirebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CodableFirebase.framework; path = Carthage/Build/iOS/CodableFirebase.framework; sourceTree = "<group>"; };
 		106A6F5A2131E45100E0C4B6 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		106A6F5B2131E45F00E0C4B6 /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		106A6F5D2131E46900E0C4B6 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		106A6F5E2131E46900E0C4B6 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = "<group>"; };
+		108E4CC6214FD06300B253C8 /* CoreServicesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreServicesError.swift; sourceTree = "<group>"; };
 		10A4BB8D211CF6AC00945EFB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		10A4BB8E211CF6AC00945EFB /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		10A4BB8F211CF6AD00945EFB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -862,6 +864,7 @@
 				106A6F42213105DF00E0C4B6 /* NetworkError.swift */,
 				106A6F442131071B00E0C4B6 /* NetworkRouter.swift */,
 				106A6F46213107C600E0C4B6 /* Router.swift */,
+				108E4CC6214FD06300B253C8 /* CoreServicesError.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -900,7 +903,7 @@
 				106A6F5C2131E46900E0C4B6 /* Auth */,
 				106A6F5B2131E45F00E0C4B6 /* Firebase.h */,
 				106A6F5A2131E45100E0C4B6 /* module.modulemap */,
-				106A6F502131382000E0C4B6 /* FirebaseManager.swift */,
+				106A6F502131382000E0C4B6 /* FirebaseAuthManager.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -2452,10 +2455,11 @@
 				F2369C226E587087C2103D16 /* SettingsModuleInput.swift in Sources */,
 				C73BACFDAB1571A642D7A2F3 /* SettingsPresenter.swift in Sources */,
 				E93EFB5A1C1AEA4DFC423E7C /* SettingsInteractorInput.swift in Sources */,
+				108E4CC7214FD06300B253C8 /* CoreServicesError.swift in Sources */,
 				52A58ED937726EBD8EBFF37D /* SettingsInteractorOutput.swift in Sources */,
 				10D9D2DF21192BBB00D6FE2F /* HomeRouterInput.swift in Sources */,
 				10D9D2DC21192BBB00D6FE2F /* HomeInteractorOutput.swift in Sources */,
-				106A6F512131382000E0C4B6 /* FirebaseManager.swift in Sources */,
+				106A6F512131382000E0C4B6 /* FirebaseAuthManager.swift in Sources */,
 				53A1AC133DCAF9301D625230 /* SettingsInteractor.swift in Sources */,
 				8B3953E0B6E8E4503D165676 /* SettingsRouterInput.swift in Sources */,
 				10D9D2D521192BBB00D6FE2F /* HomeModuleInput.swift in Sources */,

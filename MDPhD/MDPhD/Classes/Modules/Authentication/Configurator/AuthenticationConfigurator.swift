@@ -27,7 +27,8 @@ class AuthenticationModuleConfigurator {
 
         let interactor = AuthenticationInteractor()
         interactor.output = presenter
-
+        interactor.viewModel = AuthFormViewModel()
+        
         presenter.interactor = interactor
         viewController.output = presenter
     }

@@ -14,19 +14,6 @@ public enum Result<T> {
     case failure(CoreServiceError)
 }
 
-public enum CoreServiceError {
-
-    case networkError
-    case authenticationError
-    case badRequest
-    case failed
-    case outdated
-    case noData
-    case unableToDecode
-    case userAlreadyRegistered
-    case firebaseError
-}
-
 typealias AuthToken = String
 
 protocol NetworkManagerProtocol {
