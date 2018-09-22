@@ -53,18 +53,18 @@
 		1078FF30212E79D000110F9D /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8E211CF6AC00945EFB /* RxBlocking.framework */; };
 		1078FF31212E79D100110F9D /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8E211CF6AC00945EFB /* RxBlocking.framework */; };
 		108E4CC7214FD06300B253C8 /* CoreServicesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108E4CC6214FD06300B253C8 /* CoreServicesError.swift */; };
+		1093E51A2151E9460062098C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093E5192151E9460062098C /* User.swift */; };
+		1093E51C2151E9600062098C /* Institution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093E51B2151E9600062098C /* Institution.swift */; };
+		1093E51E2151E97E0062098C /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093E51D2151E97E0062098C /* Folder.swift */; };
+		1093E5232152291E0062098C /* FirebaseCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093E5222152291E0062098C /* FirebaseCRUD.swift */; };
+		1093E527215229A00062098C /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1093E525215229A00062098C /* leveldb-library.framework */; };
+		1093E528215229A00062098C /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1093E526215229A00062098C /* FirebaseDatabase.framework */; };
 		10A4BB91211CF6AD00945EFB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8D211CF6AC00945EFB /* RxSwift.framework */; };
 		10A4BB92211CF6AD00945EFB /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8D211CF6AC00945EFB /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		10A4BB95211CF6AD00945EFB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8F211CF6AD00945EFB /* RxCocoa.framework */; };
 		10A4BB96211CF6AD00945EFB /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4BB8F211CF6AD00945EFB /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		10A4BB9C211CF6ED00945EFB /* AuthFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4BB9B211CF6ED00945EFB /* AuthFormViewModel.swift */; };
 		10B0A61E8611123017C45647 /* SplashViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A2918FDE3E5923A539CEF7 /* SplashViewOutput.swift */; };
-		10B5DF90212F7B2C000B22E3 /* NSObject+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF87212F7B2C000B22E3 /* NSObject+Observable.swift */; };
-		10B5DF91212F7B2C000B22E3 /* BlockBasedSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF89212F7B2C000B22E3 /* BlockBasedSelector.swift */; };
-		10B5DF93212F7B2C000B22E3 /* UIControls+Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF8C212F7B2C000B22E3 /* UIControls+Bindable.swift */; };
-		10B5DF94212F7B2C000B22E3 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF8D212F7B2C000B22E3 /* Bindable.swift */; };
-		10B5DF95212F7B2C000B22E3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF8E212F7B2C000B22E3 /* Observable.swift */; };
-		10B5DF99212F7BE9000B22E3 /* BlockBasedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF97212F7BE9000B22E3 /* BlockBasedSelector.m */; };
 		10B5DF9B212FB2B6000B22E3 /* Appdelegate+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B5DF9A212FB2B6000B22E3 /* Appdelegate+Firebase.swift */; };
 		10C5961E213889C90029F2A6 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5961D213889C90029F2A6 /* Storable.swift */; };
 		10CD12CD21388E74003CC430 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CD12CB21388E73003CC430 /* DataStore.swift */; };
@@ -309,8 +309,7 @@
 		10200DE521105E0F00901BEA /* MDPhDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDPhDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10200DE921105E0F00901BEA /* MDPhDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDPhDUITests.swift; sourceTree = "<group>"; };
 		10200DEB21105E0F00901BEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10448356214B1A9300E5239F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		10448358214B1A9300E5239F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1032ED7521558F7600F01805 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10448359214B1A9400E5239F /* FirebaseSetup.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirebaseSetup.sh; sourceTree = "<group>"; };
 		105EC53A21192EF300B96595 /* Appdelegate+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appdelegate+Navigation.swift"; sourceTree = "<group>"; };
 		105EC53F2119302300B96595 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
@@ -344,19 +343,17 @@
 		106A6F5D2131E46900E0C4B6 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		106A6F5E2131E46900E0C4B6 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = "<group>"; };
 		108E4CC6214FD06300B253C8 /* CoreServicesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreServicesError.swift; sourceTree = "<group>"; };
+		1093E5192151E9460062098C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1093E51B2151E9600062098C /* Institution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Institution.swift; sourceTree = "<group>"; };
+		1093E51D2151E97E0062098C /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		1093E5222152291E0062098C /* FirebaseCRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCRUD.swift; sourceTree = "<group>"; };
+		1093E525215229A00062098C /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
+		1093E526215229A00062098C /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
 		10A4BB8D211CF6AC00945EFB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		10A4BB8E211CF6AC00945EFB /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		10A4BB8F211CF6AD00945EFB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		10A4BB90211CF6AD00945EFB /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		10A4BB9B211CF6ED00945EFB /* AuthFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFormViewModel.swift; sourceTree = "<group>"; };
-		10B5DF87212F7B2C000B22E3 /* NSObject+Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Observable.swift"; sourceTree = "<group>"; };
-		10B5DF89212F7B2C000B22E3 /* BlockBasedSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockBasedSelector.swift; sourceTree = "<group>"; };
-		10B5DF8C212F7B2C000B22E3 /* UIControls+Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControls+Bindable.swift"; sourceTree = "<group>"; };
-		10B5DF8D212F7B2C000B22E3 /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		10B5DF8E212F7B2C000B22E3 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		10B5DF96212F7BE8000B22E3 /* MDPhD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDPhD-Bridging-Header.h"; sourceTree = "<group>"; };
-		10B5DF97212F7BE9000B22E3 /* BlockBasedSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockBasedSelector.m; sourceTree = "<group>"; };
-		10B5DF98212F7BE9000B22E3 /* BlockBasedSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockBasedSelector.h; sourceTree = "<group>"; };
 		10B5DF9A212FB2B6000B22E3 /* Appdelegate+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appdelegate+Firebase.swift"; sourceTree = "<group>"; };
 		10C5961D213889C90029F2A6 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
 		10CD12CB21388E73003CC430 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -410,6 +407,7 @@
 		10D9D2D121192BBB00D6FE2F /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		10D9D2D321192BBB00D6FE2F /* HomeRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
 		10D9D2D421192BBB00D6FE2F /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		10E3DE622152F33400B9575D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10EA6E9A21382CDB00652C67 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		10EA6E9C21382CE400652C67 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		10EA6E9E21382CEC00652C67 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -560,8 +558,10 @@
 				10EA6E9F21382CEC00652C67 /* Security.framework in Frameworks */,
 				10EA6E9D21382CE400652C67 /* CFNetwork.framework in Frameworks */,
 				10EA6E9B21382CDB00652C67 /* libicucore.tbd in Frameworks */,
+				1093E528215229A00062098C /* FirebaseDatabase.framework in Frameworks */,
 				106A6F5F2131E46900E0C4B6 /* GTMSessionFetcher.framework in Frameworks */,
 				10A4BB95211CF6AD00945EFB /* RxCocoa.framework in Frameworks */,
+				1093E527215229A00062098C /* leveldb-library.framework in Frameworks */,
 				10D56C5621372E0E004889B2 /* FirebaseCore.framework in Frameworks */,
 				10D56C4B21371BFC004889B2 /* FirebaseCore.framework in Frameworks */,
 				10D56C5A21372E0E004889B2 /* GoogleAppMeasurement.framework in Frameworks */,
@@ -772,30 +772,22 @@
 			path = MDPhDUITests;
 			sourceTree = "<group>";
 		};
+		1032ED7421558F7600F01805 /* Prod */ = {
+			isa = PBXGroup;
+			children = (
+				1032ED7521558F7600F01805 /* GoogleService-Info.plist */,
+			);
+			path = Prod;
+			sourceTree = "<group>";
+		};
 		10448354214B1A4500E5239F /* FirebaseConfig */ = {
 			isa = PBXGroup;
 			children = (
-				10448355214B1A9300E5239F /* Dev */,
+				1032ED7421558F7600F01805 /* Prod */,
+				10E3DE612152F33400B9575D /* Dev */,
 				10448359214B1A9400E5239F /* FirebaseSetup.sh */,
-				10448357214B1A9300E5239F /* Prod */,
 			);
 			path = FirebaseConfig;
-			sourceTree = "<group>";
-		};
-		10448355214B1A9300E5239F /* Dev */ = {
-			isa = PBXGroup;
-			children = (
-				10448356214B1A9300E5239F /* GoogleService-Info.plist */,
-			);
-			path = Dev;
-			sourceTree = "<group>";
-		};
-		10448357214B1A9300E5239F /* Prod */ = {
-			isa = PBXGroup;
-			children = (
-				10448358214B1A9300E5239F /* GoogleService-Info.plist */,
-			);
-			path = Prod;
 			sourceTree = "<group>";
 		};
 		105EC53C21192F8100B96595 /* Protocols */ = {
@@ -804,6 +796,7 @@
 				105EC5412119309700B96595 /* UIStoryboardIdentifiable.swift */,
 				1069FCD3211C6B380032F435 /* SegueHandler.swift */,
 				1069FCD5211C6B760032F435 /* ItemStackable.swift */,
+				1093E5222152291E0062098C /* FirebaseCRUD.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -899,6 +892,9 @@
 		106A6F4F2131380500E0C4B6 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				1093E524215229A00062098C /* Database */,
+				1093E51F215227080062098C /* Extensions */,
+				1093E5182151E9220062098C /* Models */,
 				10D56C49213717E0004889B2 /* Core */,
 				106A6F5C2131E46900E0C4B6 /* Auth */,
 				106A6F5B2131E45F00E0C4B6 /* Firebase.h */,
@@ -918,43 +914,38 @@
 			path = ../../../../../../../../../Downloads/Firebase/Auth;
 			sourceTree = "<group>";
 		};
+		1093E5182151E9220062098C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1093E5192151E9460062098C /* User.swift */,
+				1093E51B2151E9600062098C /* Institution.swift */,
+				1093E51D2151E97E0062098C /* Folder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1093E51F215227080062098C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1093E524215229A00062098C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				1093E525215229A00062098C /* leveldb-library.framework */,
+				1093E526215229A00062098C /* FirebaseDatabase.framework */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		10A4BB9A211CF6C300945EFB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				10A4BB9B211CF6ED00945EFB /* AuthFormViewModel.swift */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		10B5DF81212F78B0000B22E3 /* Observable */ = {
-			isa = PBXGroup;
-			children = (
-				10B5DF86212F7B2C000B22E3 /* Sources */,
-			);
-			path = Observable;
-			sourceTree = "<group>";
-		};
-		10B5DF86212F7B2C000B22E3 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				10B5DF87212F7B2C000B22E3 /* NSObject+Observable.swift */,
-				10B5DF88212F7B2C000B22E3 /* BlockBasedSelector */,
-				10B5DF8C212F7B2C000B22E3 /* UIControls+Bindable.swift */,
-				10B5DF8D212F7B2C000B22E3 /* Bindable.swift */,
-				10B5DF8E212F7B2C000B22E3 /* Observable.swift */,
-				10B5DF96212F7BE8000B22E3 /* MDPhD-Bridging-Header.h */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		10B5DF88212F7B2C000B22E3 /* BlockBasedSelector */ = {
-			isa = PBXGroup;
-			children = (
-				10B5DF98212F7BE9000B22E3 /* BlockBasedSelector.h */,
-				10B5DF97212F7BE9000B22E3 /* BlockBasedSelector.m */,
-				10B5DF89212F7B2C000B22E3 /* BlockBasedSelector.swift */,
-			);
-			path = BlockBasedSelector;
 			sourceTree = "<group>";
 		};
 		10C5961C2138897C0029F2A6 /* DataStore */ = {
@@ -999,7 +990,6 @@
 				10C5961C2138897C0029F2A6 /* DataStore */,
 				106A6F4F2131380500E0C4B6 /* Firebase */,
 				106A6F322130FCF100E0C4B6 /* API */,
-				10B5DF81212F78B0000B22E3 /* Observable */,
 				1069FCCD211C69AA0032F435 /* ThirdParty */,
 				105EC53E2119301500B96595 /* Extensions */,
 				105EC53D21192F8C00B96595 /* DI */,
@@ -1364,6 +1354,14 @@
 				10D9D2D421192BBB00D6FE2F /* HomeRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		10E3DE612152F33400B9575D /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				10E3DE622152F33400B9575D /* GoogleService-Info.plist */,
+			);
+			path = Dev;
 			sourceTree = "<group>";
 		};
 		10EA6E9921382CDB00652C67 /* Frameworks */ = {
@@ -2394,7 +2392,6 @@
 				10200DCC21105E0C00901BEA /* ViewController.swift in Sources */,
 				106A6F47213107C600E0C4B6 /* Router.swift in Sources */,
 				10D9D2DD21192BBB00D6FE2F /* HomeInteractorInput.swift in Sources */,
-				10B5DF94212F7B2C000B22E3 /* Bindable.swift in Sources */,
 				10200DCA21105E0C00901BEA /* AppDelegate.swift in Sources */,
 				10D9D2D721192BBB00D6FE2F /* HomeViewOutput.swift in Sources */,
 				10D9D2D821192BBB00D6FE2F /* HomeViewController.swift in Sources */,
@@ -2438,6 +2435,7 @@
 				E588597C3020F4DC3AFA291B /* SynthesisViewInput.swift in Sources */,
 				106A6F3D2131001E00E0C4B6 /* ParameterEncoding.swift in Sources */,
 				BE1AC81FF974939B932CC942 /* SynthesisViewOutput.swift in Sources */,
+				1093E51C2151E9600062098C /* Institution.swift in Sources */,
 				A88DCD42965D31A2B6737377 /* SynthesisViewController.swift in Sources */,
 				C442876978E672E2D53B688F /* SynthesisModuleInput.swift in Sources */,
 				A29EF85CC59071DE61424F62 /* SynthesisPresenter.swift in Sources */,
@@ -2470,11 +2468,11 @@
 				10CD12CE21388E74003CC430 /* KeychainStore.swift in Sources */,
 				1BA44027326091DD5AAF73E1 /* AuthenticationViewInput.swift in Sources */,
 				10CD12D521390AB7003CC430 /* Loggable.swift in Sources */,
+				1093E51E2151E97E0062098C /* Folder.swift in Sources */,
 				F5E27649B7A83B274D3FAF5E /* AuthenticationViewOutput.swift in Sources */,
 				1069FCD4211C6B380032F435 /* SegueHandler.swift in Sources */,
 				105EC53B21192EF300B96595 /* Appdelegate+Navigation.swift in Sources */,
 				712F7964588CB1CE0E50C8C9 /* AuthenticationViewController.swift in Sources */,
-				10B5DF99212F7BE9000B22E3 /* BlockBasedSelector.m in Sources */,
 				98ADC74ADBF555FB60E171D9 /* AuthenticationModuleInput.swift in Sources */,
 				10A4BB9C211CF6ED00945EFB /* AuthFormViewModel.swift in Sources */,
 				726A639A6E2519D0A5F532C6 /* AuthenticationPresenter.swift in Sources */,
@@ -2482,6 +2480,7 @@
 				10CD12CD21388E74003CC430 /* DataStore.swift in Sources */,
 				73EB9D2485874320140A3A06 /* AuthenticationInteractorInput.swift in Sources */,
 				106A6F452131071B00E0C4B6 /* NetworkRouter.swift in Sources */,
+				1093E5232152291E0062098C /* FirebaseCRUD.swift in Sources */,
 				171838F523608C4DB3EA2BBF /* AuthenticationInteractorOutput.swift in Sources */,
 				CA5C36FFB426564448DE761B /* AuthenticationInteractor.swift in Sources */,
 				7CE840EF1B7A8ED987DA98F9 /* AuthenticationRouterInput.swift in Sources */,
@@ -2494,11 +2493,9 @@
 				10D9D2D621192BBB00D6FE2F /* HomePresenter.swift in Sources */,
 				F0C1EB5C4BE9D7BB834BB92B /* RootViewInput.swift in Sources */,
 				106A6F362130FEAE00E0C4B6 /* EndPointType.swift in Sources */,
-				10B5DF91212F7B2C000B22E3 /* BlockBasedSelector.swift in Sources */,
 				F8A576197B1404E77C055FEB /* RootViewOutput.swift in Sources */,
 				005DF49481752630AC47ABF9 /* RootViewController.swift in Sources */,
 				47CDDEFCC037449707A96C2F /* RootModuleInput.swift in Sources */,
-				10B5DF95212F7B2C000B22E3 /* Observable.swift in Sources */,
 				61B0E81D24F21ED1400810F2 /* RootPresenter.swift in Sources */,
 				106A6F43213105DF00E0C4B6 /* NetworkError.swift in Sources */,
 				F782D129C9AC8FDD01CDC0CF /* RootInteractorInput.swift in Sources */,
@@ -2507,7 +2504,6 @@
 				4669233FDC4D3073DDCC4ABF /* RootInteractor.swift in Sources */,
 				4B2994299AF8E78E57EC47A0 /* RootRouterInput.swift in Sources */,
 				19C3935B13C90F46548C3543 /* RootRouter.swift in Sources */,
-				10B5DF90212F7B2C000B22E3 /* NSObject+Observable.swift in Sources */,
 				C8970F23F33685F0B1CDDC74 /* RootConfigurator.swift in Sources */,
 				B6C2F8C2554CE20F6D91FFC5 /* RootInitializer.swift in Sources */,
 				106A6F3F2131014500E0C4B6 /* URLParameterEncoder.swift in Sources */,
@@ -2520,11 +2516,11 @@
 				D5B8449CEFCC985E82E3C221 /* SplashInteractorOutput.swift in Sources */,
 				A650CFE36E58E702F0226BB1 /* SplashInteractor.swift in Sources */,
 				D9A1EB5F7BD214B41A30C8B4 /* SplashRouterInput.swift in Sources */,
+				1093E51A2151E9460062098C /* User.swift in Sources */,
 				A015EF2EE09BD77FEF859375 /* SplashRouter.swift in Sources */,
 				1069FCD1211C6A010032F435 /* AMInputView.swift in Sources */,
 				10CD12D32138921E003CC430 /* NetworkReachabilityManager.swift in Sources */,
 				932E73F1A35C576DDC5A1E13 /* SplashConfigurator.swift in Sources */,
-				10B5DF93212F7B2C000B22E3 /* UIControls+Bindable.swift in Sources */,
 				E345C9318B33176DB4A7783F /* SplashInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2781,6 +2777,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/MDPhD/Classes/Firebase/Auth",
 					"$(PROJECT_DIR)/MDPhD/Classes/Firebase/Core",
+					"$(PROJECT_DIR)/MDPhD/Classes/Firebase/Database",
 				);
 				INFOPLIST_FILE = MDPhD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2791,7 +2788,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mifisi.mdphd-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MDPhD/Classes/Observable/Sources/MDPhD-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2811,6 +2808,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/MDPhD/Classes/Firebase/Auth",
 					"$(PROJECT_DIR)/MDPhD/Classes/Firebase/Core",
+					"$(PROJECT_DIR)/MDPhD/Classes/Firebase/Database",
 				);
 				INFOPLIST_FILE = MDPhD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2821,7 +2819,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mifisi.mdphd-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MDPhD/Classes/Observable/Sources/MDPhD-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

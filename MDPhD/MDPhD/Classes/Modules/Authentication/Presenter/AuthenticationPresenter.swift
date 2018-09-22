@@ -23,8 +23,21 @@ class AuthenticationPresenter: AuthenticationModuleInput, AuthenticationViewOutp
 
     private func setupBindings() {
         if let sourceView = view as? AuthenticationViewController {
-            sourceView.userNameTextField.bind(with: interactor.viewModel.userName)
-            sourceView.passwordTextField.bind(with: interactor.viewModel.password)
+            sourceView.userNameTextField.rx.text
+                .asObservable()
+                .map { text -> String? in
+                    return Optional(text)!
+                }
+                .bind(to: interactor.viewModel.userName)
+                .disposed(by: disposeBag)
+
+            sourceView.passwordTextField.rx.text
+                .asObservable().map {
+                    text -> String? in
+                    return Optional(text)!
+                }
+                .bind(to: interactor.viewModel.password)
+                .disposed(by: disposeBag)
         }
     }
 

@@ -38,10 +38,11 @@ extension AuthenticationInteractor: ManagerInjected {
             switch result {
             case .success:
                 print("createUser successfull")
+                // Send a message to presenter createuser successfully created.
             case .failure(let error):
+                // Send a failure message to presenter createUser failed.
                 print("Failure \(error.localizedDescription)")
             }
         }
     }
-
 }

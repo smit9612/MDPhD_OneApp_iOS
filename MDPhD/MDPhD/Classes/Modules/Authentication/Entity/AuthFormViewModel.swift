@@ -7,14 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 
 struct AuthFormViewModel {
-    //data
-    let userName: Observable<String> = Observable()
-    let password: Observable<String> = Observable()
+    
+    var userName: Variable<String?> = Variable<String?>("")
+    var password: Variable<String?> = Variable<String?>("")
 
-    //interactions
-    let showUserNameError: Observable<Bool> = Observable(false)
-    let showPasswordError: Observable<Bool> = Observable(false)
-
+    let showUserNameError = Variable<Bool>(false)
+    let showPasswordError = Variable<Bool>(false)
 }
