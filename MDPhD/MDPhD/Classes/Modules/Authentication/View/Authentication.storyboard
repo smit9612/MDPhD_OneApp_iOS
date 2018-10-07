@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p8T-wh-kX0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p8T-wh-kX0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,9 +77,6 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="loginClicked:" destination="p8T-wh-kX0" eventType="touchUpInside" id="cD4-xH-em7"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -100,6 +98,7 @@
                         <viewLayoutGuide key="safeArea" id="R7Z-Er-mcV"/>
                     </view>
                     <connections>
+                        <outlet property="doLogin" destination="Qi2-zn-GHg" id="Qc1-1l-SZU"/>
                         <outlet property="passwordTextField" destination="EQh-40-aGK" id="3VM-Zr-CwG"/>
                         <outlet property="userNameTextField" destination="ZrN-33-aJd" id="D9a-Wh-pBZ"/>
                     </connections>

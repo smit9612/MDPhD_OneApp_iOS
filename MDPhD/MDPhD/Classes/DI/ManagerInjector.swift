@@ -19,10 +19,15 @@ extension ManagerInjected {
     var firebaseManager: FirebaseManagerProtocol {
         return ManagerInjector.firebaseAuthManager
     }
+
+    var loginService: LoginServiceProtocol {
+        return ManagerInjector.loginService
+    }
 }
 
 struct ManagerInjector {
 
     static var networkManager: NetworkManagerProtocol = NetworkManager()
+    static var loginService: LoginServiceProtocol = LoginService()
     static var firebaseAuthManager: FirebaseManagerProtocol = FirebaseAuthManager()
 }

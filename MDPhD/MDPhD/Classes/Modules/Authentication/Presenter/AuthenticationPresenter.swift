@@ -8,8 +8,10 @@
 
 import RxSwift
 import RxCocoa
+import Action
+import FirebaseAuth
 
-class AuthenticationPresenter: AuthenticationModuleInput, AuthenticationViewOutput, AuthenticationInteractorOutput {
+class AuthenticationPresenter: AuthenticationModuleInput, AuthenticationViewOutput {
 
     weak var view: AuthenticationViewInput!
     var interactor: AuthenticationInteractorInput!
@@ -38,6 +40,10 @@ class AuthenticationPresenter: AuthenticationModuleInput, AuthenticationViewOutp
                 }
                 .bind(to: interactor.viewModel.password)
                 .disposed(by: disposeBag)
+
+            sourceView.doLogin.rx.tap.bind { [unowned self] in
+                self.doLogin()
+            }
         }
     }
 
@@ -45,4 +51,13 @@ class AuthenticationPresenter: AuthenticationModuleInput, AuthenticationViewOutp
         interactor.doLogin()
     }
 
+}
+
+// MARK: - AuthenticationInteractorOutput output functions from AuthInteractor.
+extension AuthenticationPresenter: AuthenticationInteractorOutput {
+    func createUser(user: Single<User>) {
+        <#code#>
+    }
+    
+    
 }

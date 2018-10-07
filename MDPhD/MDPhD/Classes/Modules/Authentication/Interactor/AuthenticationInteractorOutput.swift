@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import RxSwift
+import FirebaseAuth
 
 protocol AuthenticationInteractorOutput: class {
 
+    func createUser(user: Single<User>)
 }

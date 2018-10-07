@@ -12,7 +12,4 @@ protocol AuthenticationViewInput: class {
         @author Smitesh Patel
         Setup initial state of the view
     */
-
-    func setupInitialState()
-
 }

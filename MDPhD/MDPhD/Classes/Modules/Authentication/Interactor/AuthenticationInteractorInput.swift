@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import Action
 
 protocol AuthenticationInteractorInput {
 
     var viewModel: AuthFormViewModel! { get }
-
+    
     func doLogin()
 }

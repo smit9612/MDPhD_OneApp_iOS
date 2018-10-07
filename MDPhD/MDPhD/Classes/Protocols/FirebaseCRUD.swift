@@ -24,13 +24,12 @@ extension FirebaseCRUD {
      - parameter reference: Reference from Firebase's table
      - returns: An observable containing the element's snapshot data.
      */
-    func getAll(from reference: DatabaseReference) -> Observable<DataSnapshot> {
-        return Observable.create { observer in
+    func getAll(from reference: DatabaseReference) -> Single<DataSnapshot> {
+        return Single.create { single in
             reference.observeSingleEvent(of: .value, with: { snapshot in
-                observer.onNext(snapshot)
-                observer.onCompleted()
-            }, withCancel: { _ in
-                observer.onCompleted()
+                single(.success(snapshot))
+            }, withCancel: { fireBaseError in
+                single(.error(fireBaseError))
             })
             return Disposables.create()
         }
@@ -42,13 +41,12 @@ extension FirebaseCRUD {
      - reference: Reference from Firebase's table.
      - returns: An observable containing the element's snapshot data.
      */
-    func get(objectWithKey key: String, from reference: DatabaseReference) -> Observable<DataSnapshot> {
-        return Observable.create { observer in
+    func get(objectWithKey key: String, from reference: DatabaseReference) -> Single<DataSnapshot> {
+        return Single.create { single in
             reference.child(key).observeSingleEvent(of: .value, with: { snapshot in
-                observer.onNext(snapshot)
-                observer.onCompleted()
-            }, withCancel: { _ in
-                observer.onCompleted()
+                single(.success(snapshot))
+            }, withCancel: { fireBaseError in
+                single(.error(fireBaseError))
             })
             return Disposables.create()
         }
@@ -60,17 +58,16 @@ extension FirebaseCRUD {
      - reference: Reference from Firebase's table.
      - returns: An empty observable.
      */
-    func insert(data: [String: Any], at reference: DatabaseReference) -> Observable<Void> {
-        return Observable.create { observer in
+    func insert(data: [String: Any], at reference: DatabaseReference) -> Completable {
+        return Completable.create { completable in
             reference.setValue(data, withCompletionBlock: { error, snapshot in
                 if let error = error {
-                    observer.onError(error)
+                    completable(.error(error))
                 } else {
-                    observer.onNext(Void())
-                    observer.onCompleted()
+                    completable(.completed)
                 }
             })
-            return Disposables.create()
+            return Disposables.create {}
         }
     }
 
@@ -80,14 +77,13 @@ extension FirebaseCRUD {
      - reference: Reference from Firebase's table.
      - returns: An empty observable.
      */
-    func update(data: [String: Any], on reference: DatabaseReference) -> Observable<Void> {
-        return Observable.create { observer in
+    func update(data: [String: Any], on reference: DatabaseReference) -> Completable {
+        return Completable.create { completable in
             reference.updateChildValues(data, withCompletionBlock: { error, snapshot in
                 if let error = error {
-                    observer.onError(error)
+                    completable(.error(error))
                 } else {
-                    observer.onNext(Void())
-                    observer.onCompleted()
+                    completable(.completed)
                 }
             })
             return Disposables.create()
@@ -99,10 +95,10 @@ extension FirebaseCRUD {
      - reference: Reference from Firebase's table.
      - returns: An observable containing the element's snapshot data.
      */
-    func listen(reference: DatabaseReference) -> Observable<DataSnapshot>  {
-        return Observable.create { observer in
+    func listen(reference: DatabaseReference) -> Single<DataSnapshot>  {
+        return Single.create { single in
             let handle = reference.observe(.value, with: { snapshot in
-                observer.onNext(snapshot)
+                single(.success(snapshot))
             })
             return Disposables.create {
                 reference.removeObserver(withHandle: handle)
@@ -115,18 +111,16 @@ extension FirebaseCRUD {
      - reference: Reference from Firebase's table.
      - returns: An empty observable.
      */
-    func delete(reference: DatabaseReference) -> Observable<Void> {
-        return Observable.create { observer in
+    func delete(reference: DatabaseReference) -> Completable {
+        return Completable.create { completable in
             reference.removeValue(completionBlock: { error, snapshot in
                 if let error = error {
-                    observer.onError(error)
+                    completable(.error(error))
                 } else {
-                    observer.onNext(Void())
-                    observer.onCompleted()
+                    completable(.completed)
                 }
             })
             return Disposables.create()
         }
     }
-
 }

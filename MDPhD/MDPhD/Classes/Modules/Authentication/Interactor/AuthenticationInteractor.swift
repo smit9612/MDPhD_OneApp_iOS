@@ -7,12 +7,12 @@
 //
 
 final class AuthenticationInteractor: AuthenticationInteractorInput {
+
     var viewModel: AuthFormViewModel!
     weak var output: AuthenticationInteractorOutput!
 
     func doLogin() {
-        print("UserName: \(viewModel.userName.value ?? "")")
-        print("Password: \(viewModel.password.value ?? "")")
+        registerUser()
     }
 }
 
@@ -30,18 +30,16 @@ extension AuthenticationInteractor: ManagerInjected {
         }
     }
 
-    private func createUser() {
+    private func registerUser() {
         guard let userEmail = viewModel.userName.value, let password = viewModel.password.value else {
             return
         }
-        firebaseManager.createFirebaseNewUser(email: userEmail, password: password) { result in
-            switch result {
-            case .success:
-                print("createUser successfull")
-                // Send a message to presenter createuser successfully created.
-            case .failure(let error):
-                // Send a failure message to presenter createUser failed.
-                print("Failure \(error.localizedDescription)")
+        loginService.createAccount(with: EmailAuth(email:userEmail, password: password)).subscribe { event in
+            switch event {
+            case .success(let user):
+                print(user.refreshToken ?? "")
+            case .error(let error):
+                print (error.localizedDescription)
             }
         }
     }
